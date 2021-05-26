@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -60,6 +61,7 @@ public class Conector {
         resultado = this.st.executeUpdate(consulta);
         }catch (Exception e) {
             System.out.println("Mensaje 3 "+e.getMessage());
+            JOptionPane.showMessageDialog(null,"Este registro, tiene registros que dependen de el, no se puede eliminar por la llave forania");
             return 0;
         }finally{
             this.desconectar();
@@ -77,6 +79,7 @@ public class Conector {
             return resultado;
         }catch (Exception e) {
             System.out.println("Mensaje 4 "+e.getMessage());
+            
         }
         return null;
     }
