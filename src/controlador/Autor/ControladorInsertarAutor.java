@@ -52,7 +52,7 @@ public class ControladorInsertarAutor implements ActionListener {
             vista.cbxLibroAutor.setSelectedIndex(0);
             JOptionPane.showMessageDialog(null, "Registro Ingresado");
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Debe ingresar Datos para guardar registro");
+            JOptionPane.showMessageDialog(null,"Debe ingresar Datos para guardar registro!");
         }
     }
 
